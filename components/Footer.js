@@ -5,10 +5,12 @@ function Footer() {
 
     const currentYear = new Date().getFullYear();
 
-    return(
-        <p>
-            Copyright &#169 {currentYear}
-        </p>
+    return (
+        <footer>
+            <p>
+                Copyright &#169 {currentYear}
+            </p>
+        </footer>
     );
 }
 
