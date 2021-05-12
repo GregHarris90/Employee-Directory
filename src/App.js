@@ -1,22 +1,8 @@
 import React from "react";
-import Header from "./components/Header";
-import Search from "./components/Search";
-import Employee from "./components/Employee";
-import Footer from "./components/Footer";
-import Wrapper from "./components/Wrapper";
-
+import MainBody from "./components/MainBody";
 
 function App() {
-  return (
-    <div>
-      <Wrapper>
-        <Header />
-        <Search />
-        <Employee />
-        <Footer />
-      </Wrapper>
-    </div>
-  );
+  return <MainBody />
 }
 
 export default App;
