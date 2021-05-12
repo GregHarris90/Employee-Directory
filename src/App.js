@@ -11,7 +11,7 @@ function App() {
       <Wrapper>
         <Header />
         <Search />
-        <MainBody />
+        <Employee />
         <Footer />
       </Wrapper>
     </div>
