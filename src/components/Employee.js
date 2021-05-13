@@ -18,7 +18,9 @@ function Employee(props) {
             <tbody>
                 {props.results.map(employee => (
                     <tr key={employee.login.uuid}>
-                        <td>{employee.picture.thumbnail}</td>
+                        <th>
+                            <img src={employee.picture.thumbnail} />
+                        </th>
                         <td>{employee.first}</td>
                         <td>{employee.last}</td>
                         <td>{employee.email}</td>
