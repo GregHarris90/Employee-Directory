@@ -1,25 +1,33 @@
 import React from "react";
 
 function Employee(props) {
+    console.log(props);
     return (
         <table>
-            
-            <tr>
-                <th>Employee Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Location</th>
-            </tr>
-
-            {props.results.map(employee => (
+            <thead>
                 <tr>
-                    <td>{employee.key.id}</td>
-                    <td>{employee.picture.thumbnail}</td>
-                    <td>{employee.email}</td>
-                    <td>{employee.phone}</td>
-                    <td>{employee.location.country}</td>
+                    <th>Employee Picture</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Location</th>
                 </tr>
-            ))}
+            </thead>
+
+            <tbody>
+                {props.results.map(employee => (
+                    <tr key={employee.login.uuid}>
+                        <td>{employee.picture.thumbnail}</td>
+                        <td>{employee.first}</td>
+                        <td>{employee.last}</td>
+                        <td>{employee.email}</td>
+                        <td>{employee.phone}</td>
+                        <td>{employee.location.country}</td>
+                    </tr>
+                ))}
+            </tbody>
+
 
         </table>
     );
