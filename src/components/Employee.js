@@ -21,8 +21,8 @@ function Employee(props) {
                         <th>
                             <img src={employee.picture.thumbnail} />
                         </th>
-                        <td>{employee.first}</td>
-                        <td>{employee.last}</td>
+                        <td>{employee.name.first}</td>
+                        <td>{employee.name.last}</td>
                         <td>{employee.email}</td>
                         <td>{employee.phone}</td>
                         <td>{employee.location.country}</td>
