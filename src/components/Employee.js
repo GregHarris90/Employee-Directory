@@ -1,7 +1,6 @@
 import React from "react";
 
 function Employee(props) {
-    console.log(props);
     return (
         <table className="table-head">
             <thead>
@@ -19,7 +18,7 @@ function Employee(props) {
                 {props.results.map(employee => (
                     <tr key={employee.login.uuid}>
                         <th>
-                            <img src={employee.picture.thumbnail} />
+                            <img alt="employee-thumbnail" src={employee.picture.thumbnail} />
                         </th>
                         <td>{employee.name.first}</td>
                         <td>{employee.name.last}</td>

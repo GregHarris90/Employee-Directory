@@ -24,17 +24,27 @@ class MainBody extends Component {
 
     // TODOS:
     // 1) Write function to filter employees by name
+    searchEmployee = query => {
+        API.getRandomEmployee(query)
+            .then(res => this.setState({ result: res.data }))
+            .catch(error => console.log(error));
+    }
+
     // 2) Write function to sort employees by 
+
 
     // handle the value input by the user
     handleInputChange = event => {
         const value = event.target.value;
         this.setState({ search: value });
+        console.log(value);
+
     }
 
     // prevent page reload upon submitting search
     handleFormSubmit = event => {
         event.preventDefault();
+        this.searchEmployee(this.state.search);
     }
 
     // render searchBar and random-Employee list
