@@ -3,15 +3,15 @@ import React from "react";
 function Employee(props) {
     console.log(props);
     return (
-        <table>
+        <table className="table-head">
             <thead>
                 <tr>
-                    <th>Employee Picture</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Location</th>
+                    <th className="headers">Employee Picture</th>
+                    <th className="headers">First Name</th>
+                    <th className="headers">Last Name</th>
+                    <th className="headers">Email</th>
+                    <th className="headers">Phone</th>
+                    <th className="headers">Location</th>
                 </tr>
             </thead>
 

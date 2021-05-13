@@ -2,8 +2,8 @@ import React from "react";
 
 function Search(props) {
     return (
-        <form>
-            <div className="searchbar">
+        <form className="searchbar">
+            <div>
                 <label htmlFor="search">Search: </label>
                 <input
                     onChange={props.handleInputChange}
