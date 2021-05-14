@@ -11,19 +11,18 @@
 
 # Repository
 
-- This repository is for...
+- This repository is for a Employee Directory to view a list of random employees, search for an employee by first name and sort through the list of employee either by country or email.
 
 *LINK TO DEMO VIDEO*
 
 
 # Technology-Used
 
-- To build this project I used...
+- To build this project I used the React framework, creating the necessary components, using state to manipulate the DOM, and having an API call to get a list of random employees to generate for the web application.
 
 # User-Story
 
-- To begin the application...
-
+- To begin the application load up the web page, there you will presented with a list of employees. Then the user can search for a specific employee by inputting their first name. A user can also sort the employee list by either location or email as well.
 
 ### Main-Application
 
@@ -57,9 +56,11 @@
 
 # Contact-Info:
 
-- Name: 
-- Email: 
+- Name: Greg Harris
+- Email: ghcoder90@gmail.com
 
 # Conclusion
 
-- Overall...
+- Overall this was one of the more challenging homework assignments I've had to complete for this course. I got stuck at multiple points throughout the development process and it really set me back, thus why I am turning this in so late. 
+
+- But I also feel good that I was finally able to work through these issues which only helped me learn more about React and what it's capable of doing. I'd like to polish up the UI of this application a little more, but I need to turn it in and move onto the next assignment. 
