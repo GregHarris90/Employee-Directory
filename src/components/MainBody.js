@@ -34,13 +34,15 @@ class MainBody extends Component {
             return
         }
         this.setState({ renderedResults: filteredEmployees })
-
     }
 
     // 2) Write function to sort employees by location
     sortEmployee = event => {
         event.preventDefault();
         console.log("Button pushed!")
+        const sortByLocation = this.state.results.sort((a, b) => (a.location.country > b.location.country) ? 1 : -1)
+        console.log(sortByLocation);
+        this.setState({ renderedResults: sortByLocation })
     }
 
     // handle the value input by the user
@@ -48,7 +50,6 @@ class MainBody extends Component {
         const value = event.target.value;
         this.setState({ search: value });
         console.log(value);
-
     }
 
     // prevent page reload upon submitting search
