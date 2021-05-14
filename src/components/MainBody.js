@@ -36,13 +36,22 @@ class MainBody extends Component {
         this.setState({ renderedResults: filteredEmployees })
     }
 
-    // 2) Write function to sort employees by location
-    sortEmployee = event => {
+    // sort employees by country or location
+    sortLocation = event => {
         event.preventDefault();
-        console.log("Button pushed!")
+        console.log("Sorted by Location!")
         const sortByLocation = this.state.results.sort((a, b) => (a.location.country > b.location.country) ? 1 : -1)
         console.log(sortByLocation);
         this.setState({ renderedResults: sortByLocation })
+    }
+
+    // sort employees by email
+    sortEmail = event => {
+        event.preventDefault();
+        console.log("Sorted by Email!")
+        const sortByEmail = this.state.results.sort((a, b) => (a.email > b.email) ? 1 : -1)
+        console.log(sortByEmail);
+        this.setState({ renderedResults: sortByEmail })
     }
 
     // handle the value input by the user
@@ -67,7 +76,8 @@ class MainBody extends Component {
                     value={this.state.search}
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
-                    sortEmployee={this.sortEmployee}
+                    sortEmail={this.sortEmail}
+                    sortEmployee={this.sortLocation}
                 />
                 {this.state.results && <Employee
                     results={this.state.renderedResults} />}

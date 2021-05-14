@@ -16,6 +16,8 @@ function Search(props) {
                 />
                 <button onClick={props.handleFormSubmit}> SUBMIT / RESET </button>
                 <br></br>
+                <button onClick={props.sortEmail}>Sort by Email</button>
+                <br></br>
                 <button onClick={props.sortEmployee}>Sort by Location</button>
 
             </div >
