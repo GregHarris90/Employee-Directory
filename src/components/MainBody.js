@@ -9,28 +9,36 @@ class MainBody extends Component {
     // set state of searchBar and employeeArray
     state = {
         search: "",
-        results: null
+        results: [],
+        renderedResults: [],
     };
 
     // When components mounts, get random employees with API and setState
     componentDidMount() {
         API.getRandomEmployee()
             .then(res => {
-                this.setState({ results: res.data.results })
-                console.log(res);
+                this.setState({ results: res.data.results, renderedResults: res.data.results })
+                // console.log(res);
             })
             .catch(error => console.log(error));
     }
 
     // TODOS:
     // 1) Write function to filter employees by name
-    searchEmployee = query => {
-        API.getRandomEmployee(query)
-            .then(res => this.setState({ result: res.data }))
-            .catch(error => console.log(error));
+    searchEmployee = name => {
+        console.log(name);
+        console.log(this.state.results);
+        const filteredEmployees = this.state.results.filter(employee => employee.name.first === name)
+        console.log(filteredEmployees);
+        if (!filteredEmployees.length) {
+            this.setState({renderedResults: this.state.results})
+            return
+        }
+        this.setState({ renderedResults: filteredEmployees })
+        
     }
 
-    // 2) Write function to sort employees by 
+    // 2) Write function to sort employees by location
 
 
     // handle the value input by the user
@@ -44,6 +52,7 @@ class MainBody extends Component {
     // prevent page reload upon submitting search
     handleFormSubmit = event => {
         event.preventDefault();
+        console.log("Search submitted!")
         this.searchEmployee(this.state.search);
     }
 
@@ -57,7 +66,7 @@ class MainBody extends Component {
                     handleInputChange={this.handleInputChange}
                 />
                 {this.state.results && <Employee
-                    results={this.state.results} />}
+                    results={this.state.renderedResults} />}
             </div>
         );
     }
