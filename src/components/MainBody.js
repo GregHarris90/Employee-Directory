@@ -30,15 +30,18 @@ class MainBody extends Component {
         const filteredEmployees = this.state.results.filter(employee => employee.name.first === name)
         console.log(filteredEmployees);
         if (!filteredEmployees.length) {
-            this.setState({renderedResults: this.state.results})
+            this.setState({ renderedResults: this.state.results })
             return
         }
         this.setState({ renderedResults: filteredEmployees })
-        
+
     }
 
     // 2) Write function to sort employees by location
-
+    sortEmployee = event => {
+        event.preventDefault();
+        console.log("Button pushed!")
+    }
 
     // handle the value input by the user
     handleInputChange = event => {
@@ -63,6 +66,7 @@ class MainBody extends Component {
                     value={this.state.search}
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
+                    sortEmployee={this.sortEmployee}
                 />
                 {this.state.results && <Employee
                     results={this.state.renderedResults} />}
