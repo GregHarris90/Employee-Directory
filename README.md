@@ -13,8 +13,9 @@
 
 - This repository is for a Employee Directory to view a list of random employees, search for an employee by first name and sort through the list of employee either by country or email.
 
-*LINK TO DEMO VIDEO*
+*LINK TO DEPLOYED APPLICATION*
 
+https://gregharris90.github.io/Employee-Directory/
 
 # Technology-Used
 
