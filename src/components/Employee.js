@@ -4,6 +4,7 @@ function Employee(props) {
     return (
         <table className="table-head">
             <thead>
+                <button onClick={props.sortEmployee()}>Sort by Location</button>
                 <tr>
                     <th className="headers">Employee Picture</th>
                     <th className="headers">First Name</th>

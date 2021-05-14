@@ -23,8 +23,7 @@ class MainBody extends Component {
             .catch(error => console.log(error));
     }
 
-    // TODOS:
-    // 1) Write function to filter employees by name
+    // search employee by first name
     searchEmployee = name => {
         console.log(name);
         console.log(this.state.results);
